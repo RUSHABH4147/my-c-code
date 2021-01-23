@@ -7,7 +7,10 @@ void main()
 	clrscr();
 	printf("enter the no to check armstrong:");
 	scanf("%d",&n);
-	armstrong(n);
+	if (armstrong(n))
+	{ printf("the %d is armstrong number",n);}
+	else
+	printf("the number is not armstrong number");
 	getch();
 }
 int armstrong(int n)
@@ -21,8 +24,8 @@ int armstrong(int n)
 	n/=10;
 	}
 if(dsum==no)
-printf("the no is armstrong no%d=%d",dsum,no);
+return 1;
 else
-printf("no is not armstrong no");
+return 0;
 
 }
