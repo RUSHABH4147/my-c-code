@@ -1,3 +1,4 @@
+
 #include<stdio.h>
 #include<conio.h>
 
@@ -8,7 +9,14 @@ int n;
 clrscr();
 printf("enter the no to check is it prime no:");
 scanf("%d",&n);
-checkprime(n);
+if(checkprime(n))
+{
+	printf("the number is prime");
+}
+else
+{
+	printf("number is not prime");
+}
 getch();
 }
 int checkprime(int n)
@@ -22,9 +30,9 @@ int checkprime(int n)
   break;
   }
   if (count==0)
-  printf("%d no is prime no ",n);
+  return 1;
 
   else
-  printf("%d no is not prime no.",n);
+  return 0;
 
 }
