@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<conio.h>
-int vage(int age);
+int vage(int n);
 void main ()
 {
 int age;
@@ -11,15 +11,18 @@ scanf("%s",&nm);
 printf("enter the age of person:");
 scanf("%d",&age);
 printf("The name of person is :%s\n",nm);
-vage(age);
+if(vage(age))
+printf("the person is not vote" );
+else
+printf("the person age:%d can vote!!",age);
 getch();
 }
-int vage(int age)
+int vage(int n)
 {
 
-if(age<=18)
-printf("the person cannot vote at this age\n");
+if(n<=18)
+return 1;
 else
-printf("the person can vote ");
+return 0;
 
 }
